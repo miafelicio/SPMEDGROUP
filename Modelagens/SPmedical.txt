@@ -1,0 +1,51 @@
+TipoUsuario
+IdTipoUsuario (pk)
+TituloTipoUsuario
+
+Usuario
+IdUsuario (pk)
+IdTipoUsuario (fk)
+NomeUsuario
+Email
+Senha
+
+Medico
+IdMedico (pk)
+IdUsuario (fk)
+idClinica (fk)
+
+
+Paciente
+IdPaciente (pk)
+IdUsuario (fk)
+IdEndereco (fk)
+Telefone(14)
+DataNascimento
+Endereco
+Rg(12)
+Cpf(14)
+
+Especialidade
+IdEspecialidade (pk)
+idMedico (fk)
+Descricao
+
+Consulta
+IdConsulta (pk)
+IdClinica (fk)
+IdMedico (fk)
+IdComum (fk)
+IdSituação
+DataConsulta
+
+Situacao
+IdSituacao (pk)
+Descricao
+
+Clinica
+IdClinica (pk)
+IdEndereco (fk)
+NomeClinica
+Endereco
+Cnpj
+HorarioFuncionamento
